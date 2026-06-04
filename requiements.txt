@@ -1,0 +1,38 @@
+# TheSQLI - ZAMZZZ SQL Injection Toolkit
+# Requirements / Dependencies
+
+# ============================================
+# CORE DEPENDENCIES
+# ============================================
+
+# HTTP Requests
+requests>=2.28.0
+
+# Terminal UI & Styling
+rich>=13.0.0
+
+# ASCII Banner Generator
+pyfiglet>=0.8.post1
+
+# DNS Lookup (for subdomain & DNS features)
+dnspython>=2.3.0
+
+# ============================================
+# OPTIONAL / UTILITY
+# ============================================
+
+# Color output (fallback jika rich bermasalah)
+colorama>=0.4.6
+
+# Progress bar alternative
+tqdm>=4.64.0
+
+# ============================================
+# DEVELOPMENT / TESTING (opsional)
+# ============================================
+
+# For unit testing
+pytest>=7.0.0
+
+# For code formatting
+black>=22.0.0
