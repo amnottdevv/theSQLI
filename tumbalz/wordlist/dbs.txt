@@ -1,0 +1,8 @@
+mysql
+information_schema
+performance_schema
+test
+webapp
+blog
+cms
+db

@@ -1,0 +1,8 @@
+users
+admin
+members
+products
+posts
+pages
+customers
+orders
