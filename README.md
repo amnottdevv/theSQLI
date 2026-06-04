@@ -3,7 +3,7 @@
 <div align="center"><img width="1111" height="619" alt="dx" src="https://github.com/user-attachments/assets/b8290860-42aa-4244-8162-bf4b0fda8df5" />
 
 
-![Version](https://img.shields.io/badge/version-2.0-blue)
+![Version](https://img.shields.io/badge/version-1.0-blue)
 ![Python](https://img.shields.io/badge/python-3.8+-brightblue)
 ![License](https://img.shields.io/badge/license-MIT-red)
 ![Status](https://img.shields.io/badge/status-stable-green)
