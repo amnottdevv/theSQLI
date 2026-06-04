@@ -1,4 +1,4 @@
-# 🛡️ TheSQLI - ZAMZZZ SQL Injection Toolkit
+# 🛡️ TheSQLI - SQL Injection Toolkit
 
 <div align="center"><img width="1111" height="619" alt="dx" src="https://github.com/user-attachments/assets/b8290860-42aa-4244-8162-bf4b0fda8df5" />
 
