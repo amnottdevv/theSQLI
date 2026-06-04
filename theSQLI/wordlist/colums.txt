@@ -1,0 +1,11 @@
+username
+password
+email
+id
+user_id
+role
+name
+first_name
+last_name
+phone
+address
